@@ -26,7 +26,7 @@ Console.WriteLine(t.Tipo() + " " + t.Color());
 
 No existe el concepto de programacion orietada a objetos en C, lo mas parecido a una clase abstracta seria:
 
-'''
+```
 #include <stdio.h>
 #include <string.h>
 
@@ -43,11 +43,11 @@ int main( ) {
     printf( "Triangulo color : %s\n", triangulo.color);
     return 0;
 }
-'''
+```
 
 - Java:
 
-'''
+```
 abstract class Figura{
     abstract void nombre();
 }
@@ -65,11 +65,11 @@ public class Geometria{
         t_escaleno.tipo();
     }
 }
-'''
+```
 
 - Javascript:
 
-'''
+```
 class Figura{
     constructor(){
         if (this.constructor == Figura){
@@ -96,11 +96,11 @@ class Triangulo extends Figura{
 
 new Triangulo().tipo();
 new Triangulo().color();
-'''
+```
 
 - PHP:
 
-'''
+```
 abstract class Figura{
     abstract public function setTipo($tipo);
     abstract public function getTipo();
@@ -127,11 +127,11 @@ $trianulo = new Triangulo();
 $trianulo->setTipo("Equilatero");
 $trianulo->setColor("Verde");
 echo "El triangulo es de tipo: ".$trianulo->getTipo()." y de color: ".$trianulo->getColor();
-'''
+```
 
 - Python:
 
-'''
+```
 from abc import ABC, abstractmethod
 
 class Figura(ABC):
@@ -150,11 +150,11 @@ class Triangulo(Figura):
 
 triangulito = Triangulo('escaleno', 'rojo')
 print(triangulito.mostrar_triangulo)
-'''
+```
 
 - Ruby:
 
-'''
+```
 class Figuras
     def initialize
         raise "No se puede inicializar la clase Figura, debe ser instanciada."
@@ -188,12 +188,12 @@ end
 
 t = Triangulo.new("Equilatero", "Rojo")
 t.mostrar_tipo_color
-'''
+```
 
 - Kotlin:
 
 
-'''
+```
 abstract class Figura(forma: String, color: String){
     init(forma: forma, color: color){
         this.forma = forma
@@ -214,4 +214,4 @@ fun main(args: Array<String>) {
     val triangulo = Triangulo("Triangulo", "Rojo", "Equilatero")
     triangulo.mostrarformaColor()
 }
-'''
+```
