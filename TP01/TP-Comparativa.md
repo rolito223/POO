@@ -3,8 +3,8 @@
 
 - C#:
 
-
-'public abstract class Figura {
+```
+public abstract class Figura {
     public abstract string Tipo();
     public abstract string Color();
 }
@@ -19,8 +19,8 @@ public class Triangulo : Figura {
 }
 
 Triangulo t = new Triangulo();
-Console.WriteLine(t.Tipo() + " " + t.Color());'
-
+Console.WriteLine(t.Tipo() + " " + t.Color());
+```
 
 - C:
 
