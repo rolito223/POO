@@ -1,4 +1,16 @@
 # Trabajo Practico Nro 1 - Comparativa de Lenguajes POO
+
+Comparativa de la misma porcion de codigo en los siguientes lenguajes:
+- C#
+- C
+- Java
+- Javascript
+- PHP
+- Python
+- Ruby
+
+----------------------------------------------------------------
+
 ### Clase Abstracta
 
 - C#:
@@ -190,28 +202,127 @@ t = Triangulo.new("Equilatero", "Rojo")
 t.mostrar_tipo_color
 ```
 
-- Kotlin:
+----------------------------------------------------------------
 
+### Bucle FOR
+
+- C#:
 
 ```
-abstract class Figura(forma: String, color: String){
-    init(forma: forma, color: color){
-        this.forma = forma
-        this.color = color
-    }
-    abstract fun mostrarformaColor()
-        println("Forma $this.forma y color $this.color")
+
+for (int i = 0; i < 3; i++)
+{
+    Console.Write(i);
+}
+```
+
+- C:
+
+```
+for (i = 0; i < 3; i++)
+{
+    printf("%i",i);
+}
+```
+
+- Java:
+
+```
+for (int i = 0; i < 3; i++) {
+  System.out.println(i);
 }
 
-class Triangulo(forma: String, color: String, tipo: String): Figura(forma, color){
-    override fun mostrarformaColor() {
-        println("Forma $this.forma y color $this.color. Tipo: $tipo")
-    }
-}
+```
 
+- Javascript:
 
-fun main(args: Array<String>) {
-    val triangulo = Triangulo("Triangulo", "Rojo", "Equilatero")
-    triangulo.mostrarformaColor()
+```
+for (let i = 0; i < 3; i++) {
+  console.log(i);
 }
+```
+
+- PHP:
+
+```
+for ($i = 1; $i <= 3; $i++) {
+    echo $i;
+}
+```
+
+- Python:
+
+```
+for i in range (3):
+    print(i)
+```
+
+- Ruby:
+
+```
+for i in 1..5 do
+    puts i
+```
+
+----------------------------------------------------------------
+
+### Escritura de archivos de texto
+
+- C#:
+
+```
+String texto = "Hola Mundo, escribiendo archivos de texto en C#";
+File.WriteAllText("archivotexto.txt", texto);
+```
+
+- C:
+
+```
+FILE *f_archivo;
+f_archivo = fopen("archivotexto.txt","w");
+fprintf(f_archivo,"Hola Mundo, escribiendo archivos de texto en C");
+fclose(f_archivo);
+```
+
+- Java:
+
+```
+FileWriter f_archivo = new FileWriter("archivotexto.txt");
+f_archivo.write("Hola Mundo, escribiendo archivos de texto en Java");
+f_archivo.close();
+```
+
+- Javascript:
+Por razones de seguridad no se puede acceder a los archivos de usuario en Javascript.
+Pero se puede usar el framework NodeJS para hacerlo, por ejemplo:
+
+```
+<script>
+const fsLibrary  = require('fs')
+let texto = "Hola Mundo, escribiendo archivos de texto en Javascript/NodeJS"
+fsLibrary.writeFile('archivotexto.txt', texto)
+</script>
+```
+
+- PHP:
+
+```
+$f_archivo = fopen("archivotexto.txt", "w") or die("No se puede abrir el archivo!");
+$texto = "Hola Mundo, escribiendo archivos de texto en PHP\n";
+fwrite($f_archivo, $texto);
+fclose($f_archivo);
+```
+
+- Python:
+
+```
+f_archivo = open('archivotexto.txt', 'w+')
+f_archivo.write("Hola Mundo, escribiendo archivos de texto en Python")
+f_archivo.close()
+```
+
+- Ruby:
+
+```
+File.write('archivotexto.txt', 'Hola Mundo, escribiendo archivos de texto en Ruby')
 ```
