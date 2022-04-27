@@ -135,10 +135,10 @@ class Triangulo extends Figura{
     }
 }
 
-$trianulo = new Triangulo();
-$trianulo->setTipo("Equilatero");
-$trianulo->setColor("Verde");
-echo "El triangulo es de tipo: ".$trianulo->getTipo()." y de color: ".$trianulo->getColor();
+$triangulo = new Triangulo();
+$triangulo->setTipo("Equilatero");
+$triangulo->setColor("Verde");
+echo "El triangulo es de tipo: ".$triangulo->getTipo()." y de color: ".$triangulo->getColor();
 ```
 
 - Python:
