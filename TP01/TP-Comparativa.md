@@ -293,8 +293,8 @@ f_archivo.close();
 ```
 
 - Javascript:
-Por razones de seguridad no se puede acceder a los archivos de usuario en Javascript.
-Pero se puede usar el framework NodeJS para hacerlo, por ejemplo:
+Por razones de seguridad no se puede acceder a los archivos de usuario usando directamente Javascript.
+Pero se puede utilizar el framework NodeJS para hacerlo, por ejemplo:
 
 ```
 <script>
